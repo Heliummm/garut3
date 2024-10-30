@@ -1,0 +1,207 @@
+/* Menghilangkan margin dan padding bawaan pada body dan html */ 
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Pastikan navigasi menempel di bagian atas */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url('https://www.jalanjalanyuk.co.id/wp-content/uploads/2021/12/4282147466.jpg') no-repeat center center; /* Gambar sebagai background */
+    background-size: cover; 
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: auto; /* Ubah height menjadi auto */
+    min-height: 100vh; /* Pastikan minimal tinggi tetap 100vh */
+}
+
+header h1 {
+    font-size: 8em;
+    margin: 0 0 15px;
+    font-weight: 10000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    color: #3519d4; 
+    transform: scale(1.05); 
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7); 
+}
+
+header p {
+    margin: 15px 0;
+    text-align: justify;
+    padding: 20px; /* Ubah padding untuk tampilan mobile */
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 60px 15px;
+        min-height: 50vh; /* Ubah tinggi minimal untuk tampilan mobile */
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+}
+
+article {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    flex: 1 1 calc(60% - 20px);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+article:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+    color: #251aca;
+    font-size: 2em;
+    margin: 0 0 10px;  
+}
+
+article p {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+article ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+article ul li {
+    margin: 5px 0;
+}
+
+aside {
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1 1 calc(35% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+aside h3 {
+    color: #431cd1;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    article, aside {
+        flex: 1 1 100%;
+        margin: 0 0 20px;
+    }
+}
+
+img {
+    width: 100%; /* Ubah lebar menjadi 100% untuk responsif */
+    margin: 0 auto; /* Pusatkan gambar */
+    max-width: 500px; /* Batasi lebar maksimum */
+}
+
+/* Style untuk Navigasi */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3519d4; /* Warna saat dihover */
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang saat dihover */
+    border-radius: 5px;
+}
+
+/* Style responsif untuk navigasi */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
+/* Style untuk gambar di dalam article dan aside */
+article img, 
+aside img {
+    width: 100%; /* Pastikan gambar mengambil lebar penuh kontainer */
+    height: auto; /* Menjaga rasio gambar */
+    border-radius: 8px; /* Tambahkan radius jika ingin gambar melengkung */
+    margin: 10px 0; /* Spasi atas dan bawah */
+}
+
+/* Jika ingin gambar lebih kecil di layar sangat kecil */
+@media (max-width: 500px) {
+    article img, 
+    aside img {
+        max-width: 90%; /* Batas lebar gambar pada layar kecil */
+        margin: 10px auto; /* Pusatkan gambar */
+    }
+}
